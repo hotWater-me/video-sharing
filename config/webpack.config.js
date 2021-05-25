@@ -30,6 +30,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -286,6 +287,9 @@ module.exports = function(webpackEnv) {
                         }],
                     },
                 }),
+                new BundleAnalyzerPlugin({
+    	               analyzerPort:8888 // 默认监听8888端口
+                 })
             ],
             // Automatically split vendor and commons
             // https://twitter.com/wSokra/status/969633336732905474
