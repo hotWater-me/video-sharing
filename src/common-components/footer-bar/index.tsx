@@ -11,9 +11,9 @@ export const HomeButton = withRouter((props: IHomeButtonProps) => {
    * 判断是否是当前路由
    */
   const actived = useMemo(
-    () => props.location?.pathname === '/',
+    () => props.location?.pathname === '/', 
     [props.location]
-  );
+    );
 
   /**
    * 跳转事件
@@ -23,11 +23,11 @@ export const HomeButton = withRouter((props: IHomeButtonProps) => {
   }, [actived, props]);
 
   return (
-    <div
-      className={['home-router-button', actived ? 'actived' : ''].join(' ')}
+    <div 
+      className={['home-router-button', actived ? 'actived' : ''].join(' ')} 
       onClick={jump}
     >
-      home
+      <i className="iconfont icon-home" />
     </div>
   );
 });
@@ -41,9 +41,9 @@ export const PublishButton = withRouter((props: IPublishButtonProps) => {
    * 判断是否是当前路由
    */
   const actived = useMemo(
-    () => props.location?.pathname === '/publish',
+    () => props.location?.pathname === '/publish', 
     [props.location]
-  );
+    );
 
   /**
    * 跳转事件
@@ -53,11 +53,11 @@ export const PublishButton = withRouter((props: IPublishButtonProps) => {
   }, [actived, props]);
 
   return (
-    <div
-      className={['home-router-button', actived ? 'actived' : ''].join(' ')}
-      onClick={jump}
+    <div 
+     className={['home-router-button', actived ? 'actived' : ''].join(' ')} 
+     onClick={jump}
     >
-      {'pub'}
+      <i className="iconfont icon-tianjia iconfontpub" />
     </div>
   );
 });
@@ -71,7 +71,7 @@ export const MessageButton = withRouter((props: IMessageButtonProps) => {
    * 判断是否是当前路由
    */
   const actived = useMemo(
-    () => props.location?.pathname === '/message',
+    () => props.location?.pathname === '/message', 
     [props.location]
   );
 
@@ -83,11 +83,11 @@ export const MessageButton = withRouter((props: IMessageButtonProps) => {
   }, [actived, props]);
 
   return (
-    <div
-      className={['home-router-button', actived ? 'actived' : ''].join(' ')}
-      onClick={jump}
+    <div 
+     className={['home-router-button', actived ? 'actived' : ''].join(' ')} 
+     onClick={jump}
     >
-      {'Me'}
+      <i className="iconfont icon-geren" />
     </div>
   );
 });
