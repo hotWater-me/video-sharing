@@ -1,0 +1,38 @@
+.router-wrapper{
+  .footer-bar-wrapper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    height: 100rem;
+    width: 750rem;
+    padding: 20rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: linear-gradient(to left, #ff3183, #ff102b);
+  
+    .home-router-button{
+      color: #ffffff;
+      font-size: 32rem;
+      line-height: 60rem;
+      color: #ffffff;
+      &.actived{
+        color: rgba(0,0,0,.87);
+      }
+    }
+  }
+  
+  .container{
+    height: calc(100vh - 100rem);
+    overflow: auto;
+  }
+}
+body{
+  margin-bottom: 100rem !important;
+}
+
+
+
+
