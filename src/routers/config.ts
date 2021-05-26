@@ -1,7 +1,8 @@
-import { ReactElement } from 'react';
-import Home from '../views/home';
-import Publish from '../views/publish';
-import Message from '../views/message';
+import { ReactElement, lazy } from 'react';
+
+const AsyncHome = lazy(() => import('../views/home'));
+const AsyncPublish = lazy(() => import('../views/publish'));
+const AsyncMessage = lazy(() => import('../views/message'));
 
 export type TRouterItem = {
   path: string;
@@ -13,19 +14,19 @@ export type TRouters = Array<TRouterItem>;
 const routers = [
   {
     path: '/',
-    component: Home,
+    component: AsyncHome,
     exact: true,
     children: [],
   },
   {
     path: '/publish',
-    component: Publish,
+    component: AsyncPublish,
     exact: true,
     children: [],
   },
   {
     path: '/message',
-    component: Message,
+    component: AsyncMessage,
     exact: true,
     children: [],
   },
