@@ -1,5 +1,4 @@
 import React from 'react';
-import FooterBar from '../../common-components/footer-bar';
 import './index.less';
 
 export interface IPublishProps {}
