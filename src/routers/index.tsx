@@ -7,12 +7,14 @@ import {
 } from 'react-router-dom';
 import config from './config';
 import FooterBar from '../common-components/footer-bar';
+import Layout from '../common-components/layout'
 
 export interface IRoutersProps {}
 const Routers: React.FC<IRoutersProps> = () => (
   <Router>
-    <FooterBar>
+    
       <Switch>
+        <Layout>
         {config.map(({ path, exact, component: Comp }) => (
           <Route
             key={path}
@@ -25,8 +27,8 @@ const Routers: React.FC<IRoutersProps> = () => (
             )}
           />
         ))}
+        </Layout>
       </Switch>
-    </FooterBar>
   </Router>
 );
 
