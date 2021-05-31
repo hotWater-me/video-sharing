@@ -7,7 +7,7 @@ export interface IPublishProps {}
 const Publish: React.FC<IPublishProps> = (props) => {
   return (
     <div className="publish-router-wrapper">
-      <FooterBar />
+      Publish页面
     </div>
   );
 };

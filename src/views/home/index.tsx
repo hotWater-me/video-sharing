@@ -6,9 +6,9 @@ export interface IHomeProps {}
 
 const Home: React.FC<IHomeProps> = (props) => {
   return (
-    <FooterBar>
-      <div className="home-router-wrapper"></div>
-    </FooterBar>
+      <div className="home-router-wrapper">
+        Home页面
+      </div>
   );
 };
 
