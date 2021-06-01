@@ -1,4 +1,12 @@
-### ✨video-sharing v1.0
+## ✨ 仓库地址已迁移到 https://github.com/video-sharing-team/video-sharing-front 
+
+```jsx
+  替换remote
+     git remote rm origin
+     git remote add origin git@github.com:video-sharing-team/video-sharing-front.git
+     git remote -v
+```
+
 
 ### 🔨 接口
 
