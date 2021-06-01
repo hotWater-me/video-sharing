@@ -5,7 +5,7 @@ const { Fragment } = React;
 interface layoutType {
   children: ReactNode;
 }
-export default (props: layoutType) => {
+const Layout = (props: layoutType) => {
   return (
     <Fragment>
       {/* TODO header组件 */}
@@ -15,3 +15,4 @@ export default (props: layoutType) => {
     </Fragment>
   );
 };
+export default Layout;

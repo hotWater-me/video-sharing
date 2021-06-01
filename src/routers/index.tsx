@@ -6,7 +6,6 @@ import {
   Switch,
 } from 'react-router-dom';
 import config from './config';
-import FooterBar from '../common-components/footer-bar';
 import Layout from '../common-components/layout'
 
 export interface IRoutersProps {}
